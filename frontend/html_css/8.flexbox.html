@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(6, 3, 31);
+    }
+    div{
+        border:4px solid rgb(0, 0, 0);
+        background-color: rgb(99, 99, 49);
+        display: flex;
+        flex-direction: row;
+        /* flex-direction: column; */
+        height:500px;
+        /* flex-wrap: wrap; */
+        /* flex-wrap:wrap-reverse; */
+        /* WHAT IS FLEX FLOW */
+        /* MAIN AXIS DEPEND ON FLEX DIRECTION (IT IS ROW OR COLUMN) */
+        /* JUSTIFY CONTENT IS used on main axis */
+        justify-content: center; 
+        /* overflow: auto; */
+        /* if flex direction would be column then it would be placed in center of height */
+
+        /* justify-content: space-between; */
+        /* first and last box stick with left and right border and equal spacing between those boxes */
+
+        /* justify-content: space-around; har ek dabbe ke left and right me equal spacing  */
+        /* align-items: center ; */
+        /* USED FOR CROSS AXIS */
+        align-items:stretch;
+        /* defalut is stretch */
+        align-items:center;
+        align-content: start;
+        /* (wrap ke tym content ke beech me spacing hat gyi iski wjh se) */
+        /* align-content: end; */
+    }
+    .boxitem{
+        border:4px;
+        background-color: rgb(196, 133, 255);
+        height:150px;
+        width: 250px;
+        
+    }
+    #box1{
+        border: 2px solid black;
+        background-color: aqua;
+        ORDER:1;
+        /* box end me chala jaega */
+        flex-shrink: 4;
+        /* 4x speed of shrink */
+        flex-grow:2;
+        /* covers remaining space and grow with 2x */
+
+    }
+    #box2{
+        border: 2px solid black;
+        background-color: rgb(255, 0, 179);
+        /* align-self: start; */
+        /* aligns at start and there are multiple align options */
+    }
+    #box3{
+        border: 2px solid black;
+        background-color: rgb(255, 115, 0);
+        flex-basis:400px;
+    }
+
+</style>
+
+<body>
+    <div >
+        <div  class = "boxitem" id = "box1">BOX 1</div>
+        <div class = "boxitem" id = "box2"> BOX2 </div>
+        <div class = "boxitem" id = "box3">BOX 3 </div>
+    </div>
+    
+</body>
+</html>

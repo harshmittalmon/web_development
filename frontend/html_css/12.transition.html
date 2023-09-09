@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TRANSITION</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: rgb(61, 25, 25);
+        }
+        #info{
+            font-size: 20px;
+            color:rgb(14, 99, 110);
+            border:2px black solid;
+            background-color: bisque;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+            
+
+        }
+        
+        .div{
+            height:200px;
+            width:200px;
+            border:2px solid white;
+            background-color: aqua;
+            padding:30px;
+
+            transition-property: all;
+            transition-duration: 3s;
+            transition-delay: 1s;
+            transition-timing-function: linear;
+        }
+        /* we have shorthand notations too */
+        
+        .div:hover{
+            width:1200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="div">
+        <p id = "info">
+            TRANSITION-MOVEMENT FROM INITIAL STATE TO FINAL STATE(SINGLE STEP)
+            ANIMATION - ALSO SAME BUT IT is complex which is made from multiple transitions(multiple step)
+
+        </p>
+    </div>
+    
+</body>
+</html>

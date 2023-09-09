@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 4px solid purple;
+            width: 50%;
+            // percentage is calculated by taking reference the dimensions of the parent element in this case it's body 
+
+        }
+        .box1{
+            border: 4px solid pink;
+            height : 50vh;
+            width : 50vw;
+            font-size: 2em;
+            
+            /* // viewport means the area we see in a glance so vw means viewport width so 50 % of viewport width
+            // physical pixel = 1/96 of an inch.
+            // *ppi and dpi ke andar ka difference *
+            // physical and logical pixel ka difference */
+            /* what is em ? 
+            when we write 10em in p tag then what happens is 10 em means 10 times(the font size of the parent in this  case the parent of p tag)  */
+            /* by default the font size = 16 so if i  write 10em it will do the size  = 160 */
+            font-size: 3rem;
+            /* rem= root em means size is dependent on root element */
+            
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="box">
+        HELLO I AM HARSH
+
+    </div>
+    <div class="box1">
+        welcome to my home
+
+    </div>
+</body>
+</html>

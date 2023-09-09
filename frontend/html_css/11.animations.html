@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>ANIMATIONS</title>
+    <style>
+        /* universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(161, 97, 14);
+            border: 20px solid black;
+
+        }
+
+        .box1 {
+            background-color: aquamarine;
+            height: 100px;
+            width: 200px;
+
+            border: 12px solid black;
+            position:relative;
+            animation-name: rightmovement;
+            animation-duration: 3s;
+            /* animation-iteration-count: infinite; */
+            animation-direction: normal;
+            animation-delay: 0s;
+            /* animation-timing-function: cubic-bezier(1.0, 2.0, 0.1, 0.04); */
+            animation-timing-function: linear;
+            /* animation-direction: alternate; */
+            animation-fill-mode:forwards;
+
+
+            /* SHORT HAND NOTATION FOR THESE THINGS */
+            /* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+            /* WRITE THE PROPERTIES IN THIS MANNER */
+            animation: 3s ease-in 1s infinite alternate none running rightmovement;
+
+
+        }
+
+        @keyframes rightmovement {
+            from {
+                top: 0;
+                left:0;
+            }
+
+            to {
+                top: 0px ;
+                left :1100px;
+            }
+            
+        }
+        /* FOR MORE THAN ONE STATE WE USE %x */
+        /* @keyframes rightmovement {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 0;
+                top: calc(100% - 75px);
+                background-color: red;
+            }
+
+            50% {
+                top: calc(100% - 75px);
+                /* - the height of the box */
+                /* left: calc(100% - 75px); */
+                /* - the width of the box */
+                /* background-color: blue;
+            } */
+
+            /* 75% {
+                left: calc(100% - 75px);
+                top: 0;
+                background-color: green;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+                background-color: purple;
+            } */
+        /* } */ 
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box1">
+
+        </div>
+        <div class="circle">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
