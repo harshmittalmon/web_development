@@ -1,0 +1,14 @@
+body{
+    margin:50px;
+}
+#recipe-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#pic1,#pic2,#pic3{
+    border:2px solid black;
+    height: 200px;
+    width: 150px;  
+        
+}
