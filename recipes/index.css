@@ -6,9 +6,26 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-#pic1,#pic2,#pic3{
-    border:2px solid black;
+
+#pic1{
     height: 200px;
+    width:190px;
+    border: 5px solid rgb(216, 250, 47);
+}
+#pic2,#pic3{
+    border:5px solid rgb(212, 255, 0);
+    height: 200px; 
     width: 150px;  
         
+}
+.recepi-list1 , .recepi-list2, .recepi-list3{
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+.btn{
+    height:100px;
+    width:100px;
+    background-color: blueviolet;
+    
 }
