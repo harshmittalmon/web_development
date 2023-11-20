@@ -1,12 +1,15 @@
-let var1 = document.querySelector('#recipe-list');
-var1.style.cssText = "background-color:white;";
-let var2 = document.querySelector('#recepi-list1')  ;
-var2.textContent = "hi text content is successfooool";
-const content = document.createElement('div');
-content.classList.add(aisehi);
-const container  = document.querySelector('#recepi-list1');
+let heading1 = document.querySelector('#heading1');
+heading1.addEventListener('mouseover',function(){
+    heading2.textContent = "THANKS FOR touching ME ! ";
+    heading2.style.cssText  = "color:black;"
 
-container.appendChild(content);
-const btn  = document.querySelector('button');
-console.log(btn);
-btn.classList.add('btn');
+})
+heading1.addEventListener('mouseout',function(){
+    heading2.textContent = "Let's look at some great recipes across world";
+    heading2.style.cssText  = "color: rgb(150, 8, 78);"
+    
+
+})
+
+var heading2 = document.querySelector('#heading2');
+
