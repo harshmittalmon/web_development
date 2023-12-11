@@ -8,16 +8,24 @@
  }
  .second-level{
     display: flex;
-    margin: 4px;
-    background-color: rgb(9, 3, 28)
+    /* margin: 4px; */
+    background-color: rgb(9, 3, 28);
+    border:none;
+ }
+ .pen-clr{
+   background-color: black;
  }
  .third-level{
     background-color: rgb(167, 230, 218);
     color:rgb(4, 11, 49);
-    border: 1px solid rgb(19, 18, 18)  ;
+    /* border: 1px solid rgb(19, 18, 18)  ; */
     box-sizing: border-box;
-    
+    cursor:pointer;  
+      
  }
+ /* .third-level:hover{
+   background-color: black;
+ } */
  .maindiv{
     width: clamp(700px,800px,900px);
     margin: 3%;
