@@ -156,7 +156,6 @@ section.about{
 }
 .about .container .about-content p{
     line-height: 1.8rem;
-    /* font-family: Arial, Helvetica, sans-seri][p[f; */
     font-weight: 500;
 }
 .about .container .about-content .about-links{
@@ -167,7 +166,7 @@ section.about{
     height:35px;
     background-color: #000000f4;
     border-radius: 50%;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
@@ -225,6 +224,7 @@ section.about{
     flex-direction: column;
     background: rgba(87, 239, 242,0.8);
     opacity: 0;
+    justify-content: center;
 }
 .overlay:hover{
     opacity: 1;
