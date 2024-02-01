@@ -1,0 +1,17 @@
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.flex{
+    display: flex;
+}
+
+.button-class{
+    width: 90%;
+    height: 80px;
+    background-color: black;
+    color: white;
+
+}

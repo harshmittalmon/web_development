@@ -7,9 +7,9 @@ function makegrid(container, num) {
         let width = 1000;
         let k = 1;
         for (k = 1; k < 100; k++) {
-            if ((num * k + 2 * num) > (600)) break;
+            if ((num * k +2*num ) > (600)) break;
         }
-        let height = k - 1;
+        let height = k;
         div.setAttribute('style', 'display:flex;');
         div.classList.add('second-level');
         for (let j = 0; j < num; j++) {
@@ -19,7 +19,7 @@ function makegrid(container, num) {
             divchild.style.height = "" + height + "px";
             divchild.classList.add('third-level');
             div.appendChild(divchild);
-
+           
         }
         container.appendChild(div);
     }
@@ -34,7 +34,7 @@ let num = prompt("enter the grid size : ");
 makegrid(maindiv, num);
 let nodelist = document.querySelectorAll('.third-level');
 nodelist.forEach(element => {
-    element.addEventListener('dblclick', function (e) {
+    element.addEventListener('click', function (e) {
         isdouble = true;
         e.target.style.backgroundColor = "white";
         console.log(e.target);
