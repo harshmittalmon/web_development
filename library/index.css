@@ -1,78 +1,143 @@
 @import url(utility.css);
-*{
-    margin: 0;padding:0;
+html{
+    margin:0px ; padding:0px;
+    background-color: rgb(17, 16, 16);
+    box-sizing: border-box;
 }
+body{margin:0px;}
+
+:root{
+    --primary-color: rgb(141, 0, 0);
+    --secondary-color: rgb(30, 197, 24);
+    --border-color: rgb(255, 255, 2);
+    --text-color: rgb(255, 255, 255);
+    --background-1: rgb(69, 2, 2); 
+      
+
+}
+
+
+
+
 header{
-    background-color: black;
-    position: fixed;
-    width: 100vw;height: 20vh;
+    background-color:var(--background-1);
+    font-family: Protest Guerrilla;
+    top:0px;
+    font-size: 3rem;
+    height: 8vh;    
+    padding: min(2rem);
+    color: rgb(216, 0, 0);
+    gap: 30px;
 }
-header > p{
-    color: rgb(59, 225, 216);
-    font-family: Dancing Script;    
-    font-size: 7rem;
+header img{
+    width: 100px;
 }
-.side_panel{
-    position: fixed;
-    height: 100vh;
-    width: 15vw;
-    background: linear-gradient(0deg,rgb(27, 67, 65),rgb(12, 44, 44));
-    /* flex-direction: column; */
+
+
+
+.add-book{
+    color: var(--text-color);    
+    gap:2rem;
+    font-family: Protest Guerrilla;
+    letter-spacing: 0.08rem;
+    margin-top: 2rem;
 }
-.options{
-    margin: 1rem;
-    height: 60vh;width:15vw;background-color: rgb(225, 243, 241);
-    position: fixed;bottom:10%;right:3rem;z-index: -1;
-    flex-direction: column;
-    gap:3rem;
+.add-book button{
+    border-radius:50%;
+    height: 5.5rem;
+    width:5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--border-color);
+    
 }
+.add-book img{
+    background-color: var(--border-color);
+    height: 5rem;width: 5rem;border-radius: 50%;
+}
+
+
+
+
 
 .books{
-    margin: 2rem;
-    position: absolute;
-    left: 16vw;top:20vh;
-    width: min(60%,calc(100% - 40vw));height: calc( (100% - 20vh) );
-    background-color: rgb(232, 241, 232);z-index: -1;
-}
-.grid{
     display: grid;
-    background-color: rgb(9, 56, 56);
-    width: 100%;
-    height: auto ;
-    grid-template-rows: 40fr 40fr  ;
-    grid-template-columns: 33fr 33fr 33fr ;
-
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    grid-template-rows: 1fr;
+    margin: 2rem;
+    background-color: rgb(34, 36, 37);
+    box-shadow: 0 -10px 10px ;
 }
-.grid > *{
-    width: 200px;height: 200px;background-color: rgb(173, 232, 177);
-    margin: 2rem;padding:1rem; border-radius: 20%;  
-    font-family: Dancing Script;
-    font-size: 2rem;
+.books>div{
+    padding: 2rem;
+    background-color: rgb(255, 255, 255);
+    margin: 3rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family:Protest Guerrilla;
+    color:black;
+    border-radius: 5%;
+    border: 6px dashed var(--primary-color);
 }
-
+.books>div>p,label{
+    font-size:1.5rem;
+}
+.books>div:hover{
+    background-color: rgb(248, 246, 147);
+    box-shadow: 5px 5px 50px;
+}
+input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+}
 
 
 dialog{
-    position : fixed;
-    top:50%;
-    left : 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    background-color: rgb(50, 52, 52);
+    height: max(300px,50vh);
+    width: max(500px,50vw);
     
 }
-dialog .buttons :first-child{
-    width:10vw;
+dialog>form{
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-dialog .buttons :nth-child(3){
-    width:10vw;
+dialog>form>div{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:large;
 }
-.input-book-details::backdrop {
-    background-image: linear-gradient(
-      45deg,
-      magenta,
-      rebeccapurple,
-      dodgerblue,
-      green
-    );
-    opacity: 0.8;
+dialog>form>div>input{
+    width: 60%;
+    height: 1.2rem;
+    font-size: large;
+    font-family:Arial, Helvetica, sans-serif;
+}
+dialog>form>button{
+    font-family: 'Lucida Sans';
+    font-weight: 900;
+    font-size: medium;
+    padding: 0.7rem;
+}
+
+dialog::backdrop{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+}
+
+
+
+
+@media (max-width:600px){
+    header>h1{
+        opacity: 0;
+        width: 0px;
+    }
 }

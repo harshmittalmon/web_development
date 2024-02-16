@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Comforter&family=Dancing+Script:wght@700&family=Lexend+Peta:wght@100&family=Poppins&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Comforter&family=Dancing+Script:wght@700&family=Lexend+Peta:wght@100&family=Poppins&family=Protest+Guerrilla&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine&effect=shadow-multiple|anaglyph|neon|wallpaper|crackle|3d-float">
 
@@ -17,79 +17,48 @@
 </head>
 
 <body>
-    <header class="flex justify-center align-center">
-        <p class="font-effect-3d-float">Book Manager</p>
+    <header class="flex justify-center align-center  ">
+        <img src="./img/book-shelf.svg" alt="" srcset="">
+        <h1>Book&nbspManager</h1>
     </header>
-    <div class="side_panel ">
+    <div class="add-book flex justify-center align-center">
         
+        <h1>ADD BOOK</h1>    
+        <button class="btn-primary">
+            <img src="img/addition.svg" alt="ADD_BOOK_LOGO">
 
-
-
+        </button>
     </div>
-    <section class="books">
-        <div class="grid">
-            <div class="flex justify-center align-center  font-effect-anaglyph	">
-                <p>harsh</p>
-            </div>
-            <div class="flex justify-center align-center  ">
-                <p>harsh</p>
-            </div>
-            <div class="flex justify-center align-center  ">
-                <p>harsh</p>
-            </div>
-            <div class="flex justify-center align-center  ">
-                <p>harsh</p>
-            </div>
-            <div class="flex justify-center align-center  ">
-                <p>harsh</p>
-            </div>
-            <div class="flex justify-center align-center  ">
-                <p>harsh</p>
-            </div>
-
-
-        </div>
-    </section>
-    <section class="options flex align-center justify-center">
-
+    <div class="books">  
         
+        
+    </div>
+    <dialog class="dialog-modal">
+		<form class="book-details-input">
+			<div>
+				<label for="title">Title of the Book: </label>
+				<input type="text" id="title" name="title" >
+			</div>
+			<div>
+				<label for="author">Author: </label>
+				<input type="text" id="author" name="author">
+			</div>
+			<div>
+				<label for="pages">Number of Pages: </label>
+				<input type="number" id="pages" name="pages">
+			</div>
+			<div>
+				<label for="readStatus">Did you read the book?  </label>
+				<input type="checkbox" id="read-status" name="read-status" >
+			</div>
             
-            <button class="add-button button-class">
-                ADD BOOK
+            <button type ="submit" class="cancel-book">
+                Cancel
             </button>
-
-            <button class="remove-button button-class">
-                Remove book 
-            </button>
-
-    </section>
-
-
-
-    <dialog class="input-book-details">
-        <form action="">
-            <p>ENTER THE BOOK DETAILS</p>
-            <div class="author-name">
-                <input type="text">
-            </div>
-            <div class="number of pages">
-                <input type="number ">
-            </div>
-            <div class="buttons">
-                <button class="ok-button">
-                    OK
-                </button>
-                <br>
-                <button class="cancel-button" formmethod="dialog">
-                    <!-- FORMMETHOD= "DIALOG" KI WJAH SE BUTTON CLICK PE FORM CLOSES -->
-                    Cancel
-                </button>
-            </DIV>
-        </form>
-
-    </dialog>
+			<button type="submit" class="submit-book btn-primary">Submit</button>
+		</form>
+	</dialog>
 
     <script src="index.js"></script>
 </body>
-
 </html>

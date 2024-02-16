@@ -1,3 +1,4 @@
+
 .align-center{
     align-items: center;
 }
@@ -7,6 +8,12 @@
 .flex{
     display: flex;
 }
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
 
 .button-class{
     width: 90%;
@@ -14,4 +21,19 @@
     background-color: black;
     color: white;
 
+}
+.btn-primary{
+    background-color: var(--primary-color);
+    border: 2px solid black; 
+    padding: 1rem;
+    font-family:'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight:700;   
+    color:rgb(255, 255, 255);
+}
+.btn-primary:hover{
+    background-color:transparent;
+    border: 2px solid black;
+    color:rgb(0, 0, 0);
+    transition:all 0.4s ease;
 }
